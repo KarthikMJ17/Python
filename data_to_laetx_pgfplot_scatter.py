@@ -88,29 +88,5 @@ with open(base_folder+only_file_name.replace('.dat','')+'.tex', 'w') as f:
     legend_text=legend_text[:-1]+"}\n"
     f.write(legend_text)
     f.write("\end{axis}"+"\n"+"\end{tikzpicture}")
-#        f.write('CLIP OFF\n')
-#        f.write(str(x_label_anchor)+' '+str(y_label_anchor)+' '+'N'+sym+"'"+a+'\n')
-#        y_label_anchor+=anchor_step
-#        f.write('COLOR '+str(i+2)+'\n')
-
-#    f.write('XSCALE'+'   '+str(min_x)+'  '+str(max_x)+'\n')
-#    f.write('YSCALE'+'   '+str(min_y)+'  '+str(max_y)+'\n')
-#    f.write('XTYPE LINEAR'+'\n'+'YTYPE LINEAR'+'\n'+'XLENGTH'+'  '+str(xlength)+'\n'+'YLENGTH'+'  '+str(ylength)+'\n')
-#    f.write('DATASET 1'+'\n'+'CHAR '+str(char_size)+'\n'+'COLOR 1'+'\n'+'SYMBOLSIZE '+str(symbol_size)+'\n')
-#    f.write('BLOCK X=C1; Y=C2;  GOC=C3,MAWS1;\n')
-#    for i,a in enumerate(authors):
-#        f.write('CLIP ON\n')
-#        for j in range(0,len(locals()[a+'_data'])):
-#            xd=(locals()[a+'_data'])[j,0]
-#            yd=(locals()[a+'_data'])[j,1]
-#            sym='S'+str(i+2)
-#            f.write(str(xd)+' '+str(yd)+' '+sym+'\n')
-#        f.write('CLIP OFF\n')
-#        f.write(str(x_label_anchor)+' '+str(y_label_anchor)+' '+'N'+sym+"'"+a+'\n')
-#        y_label_anchor+=anchor_step
-#        f.write('COLOR '+str(i+2)+'\n')
-#    f.write('BLOCKEND')
-#    #for i in authors:
-
 f.close()
 print("Done sucessfuly")
